@@ -1,0 +1,15 @@
+<h1>Criteria#index</h1>
+
+Criteria for the decision:<br />
+<%= @decision.text %>
+
+<ul>
+<% @criteria.each do |c| %>
+	<li>
+		<b><%= c.text %></b> for the decision <b><%= c.decision.text %></b>
+		<%= button_to "X", decision_criterion_path(@decision.id, c.id), method: :delete %>
+	</li>
+<% end %>
+</ul>
+
+<%= link_to "Add a criterion", new_decision_criterion_path(@decision.id) %>

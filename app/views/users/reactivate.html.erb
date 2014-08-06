@@ -1,0 +1,6 @@
+<%= form_for @user do |f| %>
+<!-- 	<%= f.check_box: is_active %> -->
+	<%= f.text_field :email, placeholder: "Email" %> <br />
+	<%= f.password_field :password, placeholder: "password..." %><br />
+	<%= f.submit %>
+<% end %>

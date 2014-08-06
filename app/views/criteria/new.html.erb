@@ -1,0 +1,9 @@
+<h1>Criteria#new</h1>
+
+Add a criteria for this decision:<br />
+<%= @decision.text %>
+
+<%= form_for [@decision, @criterion] do |f| %>
+	<%= f.text_field :text, placeholder: "What's a criterion for this decision?" %>
+	<%= f.submit %>
+<% end %>
