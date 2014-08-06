@@ -24,6 +24,22 @@
  	margin-top: 1em;
  }
 
+  .btn-bluer {
+ 	background-color: #4983E6;
+ 	border: none;
+ 	color: white;
+ 	width: 160px;
+ 	margin-top: 1em;
+ }
+
+   .btn-red {
+ 	background-color: #FF3333;
+ 	border: none;
+ 	color: white;
+ 	width: 160px;
+ 	margin-top: 1em;
+ }
+
  .logIn {
  	background-color: #dedede;
  	width: 300px;

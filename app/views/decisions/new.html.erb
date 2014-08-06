@@ -1,13 +1,13 @@
-<div class="container">
+<div class="container newD">
 
 	<h1 class="text-center">Let's help you decide.</h1>
 
 	<div class="decisionInput text-center">
 
 	<%= form_for @decision do |f| %>
-		<%= f.text_field :text, placeholder: "What's the decision?" %> <br /><br />
+		<%= f.text_field :text, :class => "decisionInputTxt", placeholder: "What's the decision?" %> <br />
 	<!-- 	<%= f.collection_select :user_id, User.all, :id, :name %> -->
-		<%= f.submit :class => "btn btn-default btn-md" %>
+		<%= f.submit :class => "btn btn-default btn-md btn-bluer" %>
 	<% end %>
 
 	</div>

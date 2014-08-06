@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    @users = User.all
+    # @users = User.all
     @users = User.where(is_active: true)
   end
 
@@ -29,7 +29,7 @@ class UsersController < ApplicationController
       if current_user != @user
         if 
           current_user 
-          redirect_to user_path(current_user)
+          redirect_to new_decision_path(current_user)
         else 
           redirect_to new_session_path #send them to login page/ make user login in
       end

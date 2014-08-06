@@ -1,10 +1,16 @@
-<h1>Decisions#index</h1>
+<div class="container">
 
-<ul>
+<h1 class="text-center">My Decisions</h1>
+
+<ul class="decisionsList">
 <% @decisions.each do |d| %>
 	<li>
 		<%= link_to d.text, decision_criteria_path(d.id) %>
-		<%= button_to "X", decision_path(d.id), method: :delete %>
+		
+		<%= button_to "make this decision!", decision_path(d.id), :class => "btn btn-default btn-md btn-bluer", method: :delete %>
+		<%= button_to "delete this decision", decision_path(d.id), :class => "btn btn-default btn-md btn-red", method: :delete %>
 	</li>
 <% end %>
 </ul>
+
+</div>
