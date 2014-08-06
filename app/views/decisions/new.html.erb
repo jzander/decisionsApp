@@ -1,3 +1,9 @@
+<div class="topBar">
+
+	<button class="btn btn-default btn-md btn-bluer prev">See Previous Decisions</button>
+
+</div>
+
 <div class="container newD">
 
 	<h1 class="text-center">Let's help you decide.</h1>
@@ -6,10 +12,11 @@
 
 	<%= form_for @decision do |f| %>
 		<%= f.text_field :text, :class => "decisionInputTxt", placeholder: "What's the decision?" %> <br />
-	<!-- 	<%= f.collection_select :user_id, User.all, :id, :name %> -->
-		<%= f.submit :class => "btn btn-default btn-md btn-bluer" %>
+		<%= f.submit "Answer", :class => "btn btn-default btn-md btn-bluer" %>
 	<% end %>
 
+<!-- 	<%= button_to "see all decisions", new_decision_path if current_user %>
+ -->
 	</div>
 
 </div>

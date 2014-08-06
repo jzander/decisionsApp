@@ -1,15 +1,45 @@
-<h1>Criteria#index</h1>
+<div class="container">
 
-Criteria for the decision:<br />
-<%= @decision.text %>
+	<h2 class="text-center decHead"><strong>Decision:<br /></strong></h2>
+			<div class="dec text-center">
+			<strong><%= @decision.text %></strong>
+			</div>
 
-<ul>
-<% @criteria.each do |c| %>
-	<li>
-		<b><%= c.text %></b> for the decision <b><%= c.decision.text %></b>
-		<%= button_to "X", decision_criterion_path(@decision.id, c.id), method: :delete %>
-	</li>
-<% end %>
-</ul>
 
-<%= link_to "Add a criterion", new_decision_criterion_path(@decision.id) %>
+
+		<div class="importantFactorBox col-xs-12">
+
+			<h3 class="text-center"><strong>List the Important Factors:<br /></strong></h3>
+
+			<ul class="criList">
+			<% @criteria.each do |c| %>
+				<li>
+					<div class="criItem">
+						<div class="col-sm-6">
+							<b><%= c.text %></b> <br /><span class="decision"> for the decision <b><%= c.decision.text %></b></span>
+						</div>
+
+						<div class="col-sm-3">
+							<%= button_to "rate this factor", decision_criterion_path(@decision.id, c.id), method: :delete, :class => "btn btn-default btn-md btn-green deleteCri pull-right" %>
+						</div>
+
+						<div class="col-sm-3">
+							<%= button_to "delete this factor", decision_criterion_path(@decision.id, c.id), method: :delete, :class => "btn btn-default btn-md btn-redr deleteCri" %>
+						</div>
+				
+					</div>
+
+				</li>
+			<% end %>
+			</ul>
+
+		</div>
+
+
+	<div class="addCriterion text-center col-xs-12">
+
+	<%= link_to "Add a criterion", new_decision_criterion_path(@decision.id) %>
+
+	</div>
+
+</div>

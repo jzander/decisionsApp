@@ -3,6 +3,10 @@ Rails.application.routes.draw do
     resources :criteria, only: [:index, :new, :create, :destroy]
   end
 
+  get 'decisions/home' => 'decisions#home', as: :home
+
+  root to: 'decisions#home'
+
   resource :session, only: [:new, :create, :destroy]
 
   get 'users' => 'users#index', as: :users
@@ -15,7 +19,7 @@ Rails.application.routes.draw do
   delete 'users/:id' => 'users#destroy'
 
 
-  root 'users#new'
+ 
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

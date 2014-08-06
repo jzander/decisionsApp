@@ -1,9 +1,17 @@
-<h1>Criteria#new</h1>
+<div class="container text-center">
 
-Add a criteria for this decision:<br />
-<%= @decision.text %>
+<h2>Add some important factors for your decision:</h2>
 
-<%= form_for [@decision, @criterion] do |f| %>
-	<%= f.text_field :text, placeholder: "What's a criterion for this decision?" %>
-	<%= f.submit %>
-<% end %>
+<h2><%= @decision.text %></h2>
+
+	<div class="addCri">
+
+	<%= form_for [@decision, @criterion] do |f| %>
+		<%= f.text_field :text, placeholder: "What's a criterion for this decision?", :class => "criInput" %>
+		<br />
+		<%= f.submit :class => "btn btn-default btn-md btn-bluer" %>
+	<% end %>
+
+	</div>
+
+</div>

@@ -1,3 +1,58 @@
 // Place all the styles related to the criteria controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.addCriterion {
+	width: 100%;
+	margin-top: 10em;
+}
+
+.cri {
+	margin-top: 5em;
+}
+
+.decisionBox {
+	height: 300px;
+	text-align: center;
+	font-size: 2em;
+}
+
+.dec {
+	font-size: 2em;
+}
+
+.decHead {
+	margin-top: 4em;
+}
+
+.addCri {
+	margin-top: 2em;
+}
+
+.criInput {
+	width: 600px;
+}
+
+.criList {
+	margin-top: 1em;
+	font-size: 1.3em;
+}
+
+.deleteCri {
+	display: inline;
+	width: 200px;
+}
+
+.criList li {
+	list-style: none;
+}
+
+.criItem {
+	margin-top: 2em;
+}
+
+.decision {
+	font-size: 1em;
+	color: #cfcfcf;
+}

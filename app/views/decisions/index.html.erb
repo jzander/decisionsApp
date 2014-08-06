@@ -6,11 +6,15 @@
 <% @decisions.each do |d| %>
 	<li>
 		<%= link_to d.text, decision_criteria_path(d.id) %>
-		
-		<%= button_to "make this decision!", decision_path(d.id), :class => "btn btn-default btn-md btn-bluer", method: :delete %>
+		<br />
+		<%= link_to "make this decision!", decision_criteria_path(d.id), :class => "btn btn-default btn-md btn-bluer" %>
 		<%= button_to "delete this decision", decision_path(d.id), :class => "btn btn-default btn-md btn-red", method: :delete %>
 	</li>
 <% end %>
 </ul>
+
+
+	<%= link_to "Add a new decision", new_decision_path if current_user %>
+		
 
 </div>

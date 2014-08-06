@@ -16,6 +16,11 @@
 
  @import 'bootstrap';
 
+body {
+	width: 100%;
+	height: 100%;
+}
+
  .btn-blue {
  	background-color: #4983E6;
  	border: none;
@@ -32,11 +37,27 @@
  	margin-top: 1em;
  }
 
+   .btn-green {
+ 	background-color: #66BD15;
+ 	border: none;
+ 	color: white;
+ 	width: 130px;
+ 	margin-top: 1em;
+ }
+
    .btn-red {
  	background-color: #FF3333;
  	border: none;
  	color: white;
  	width: 160px;
+ 	margin-top: 1em;
+ }
+
+    .btn-redr {
+ 	background-color: #FF3333;
+ 	border: none;
+ 	color: white;
+ 	width: 130px;
  	margin-top: 1em;
  }
 
@@ -51,4 +72,16 @@
 
  .inputEmail {
  	margin-bottom: .2em;
+ }
+
+ .topBar {
+ 	position: fixed;
+ 	top: -.5em;
+ 	float: right;
+ 	right: .5em;
+ }
+
+ .prev {
+ 	 width: 250px;
+ 	 background-color: #66BD15;
  }
