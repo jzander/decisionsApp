@@ -33,6 +33,10 @@ class DecisionsController < ApplicationController
 
   def destroy
   	Decision.find(params[:id]).destroy
-  	redirect_to decisions_path
+      if Decision.count < 1
+      redirect_to new_decision_path
+      else
+      redirect_to decisions_path
+    end
   end
 end

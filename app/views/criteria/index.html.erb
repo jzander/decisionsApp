@@ -8,8 +8,9 @@
 
 
 		<div class="importantFactorBox col-xs-12">
+			<br /><br />
 
-			<h3 class="text-center"><strong>List the Important Factors:<br /></strong></h3>
+			<h3 class="text-center"><strong>List the Important Factors:<br /></strong></h3><br />
 
 			<ul class="criList">
 			<% @criteria.each do |c| %>
@@ -19,8 +20,8 @@
 							<b><%= c.text %></b> <br /><span class="decision"> for the decision <b><%= c.decision.text %></b></span>
 						</div>
 
-						<div class="col-sm-3">
-							<%= button_to "rate this factor", decision_criterion_path(@decision.id, c.id), method: :delete, :class => "btn btn-default btn-md btn-green deleteCri pull-right" %>
+						<div class="col-sm-3 rating">
+							<b> <%= c.importance %></b> <br />
 						</div>
 
 						<div class="col-sm-3">
@@ -28,18 +29,51 @@
 						</div>
 				
 					</div>
-
+						<br /><br /><br />
 				</li>
 			<% end %>
 			</ul>
 
 		</div>
 
+			<div class="addCri text-center">
 
-	<div class="addCriterion text-center col-xs-12">
+				<%= form_for [@decision, @criterion] do |oneCriterion| %>
+					<%= oneCriterion.text_field :text, placeholder: "What's a factor for this decision?", :class => "criInputer text-center" %>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Give this factor a value: <%= oneCriterion.select :importance,  
+							'<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>'.html_safe
 
-	<%= link_to "Add a criterion", new_decision_criterion_path(@decision.id) %>
+						  %>
+					<br /><br />
+					<%= oneCriterion.submit :class => "btn btn-default btn-md btn-greeny" %>
+				<% end %>
 
-	</div>
+
+
+			</div>
+
 
 </div>
+
+	<div class="text-center">
+
+	<%= link_to "Find your answer!", new_decision_criterion_path(@decision.id), :class => "btn btn-default btn-md btn-bluey" %>
+
+	<br />
+	
+	<button onclick="window.location.href='/decisions'" class="btn btn-default btn-md btn-redy">See Previous Decisions</button>
+
+	</div>
+	
+	<br /><br /><br />
+</div>
+<br /><br />

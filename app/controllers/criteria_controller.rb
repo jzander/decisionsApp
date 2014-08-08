@@ -3,10 +3,11 @@ class CriteriaController < ApplicationController
 
     def index
     	@criteria = @decision.criteria
+      @criterion = Criterion.new
     end
 
     def new
-    	@criterion= Criterion.new
+    	@criterion = Criterion.new
     end
 
     def create

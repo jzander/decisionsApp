@@ -1,6 +1,6 @@
 <div class="topBar">
 
-	<button class="btn btn-default btn-md btn-bluer prev">See Previous Decisions</button>
+	<button onclick="window.location.href='/decisions'" class="btn btn-default btn-md btn-bluer prev">See Previous Decisions</button>
 
 </div>
 
@@ -15,8 +15,6 @@
 		<%= f.submit "Answer", :class => "btn btn-default btn-md btn-bluer" %>
 	<% end %>
 
-<!-- 	<%= button_to "see all decisions", new_decision_path if current_user %>
- -->
 	</div>
 
 </div>

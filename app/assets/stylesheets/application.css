@@ -37,11 +37,35 @@ body {
  	margin-top: 1em;
  }
 
+   .btn-bluey {
+ 	background-color: #4983E6;
+ 	border: none;
+ 	color: white;
+ 	width: 250px;
+ 	margin-top: 1em;
+ }
+
+    .btn-redy {
+ 	background-color: #FF3333;
+ 	border: none;
+ 	color: white;
+ 	width: 250px;
+ 	margin-top: 1em;
+ }
+
    .btn-green {
  	background-color: #66BD15;
  	border: none;
  	color: white;
  	width: 130px;
+ 	margin-top: 1em;
+ }
+
+    .btn-greeny {
+ 	background-color: #66BD15;
+ 	border: none;
+ 	color: white;
+ 	width: 250px;
  	margin-top: 1em;
  }
 
@@ -84,4 +108,8 @@ body {
  .prev {
  	 width: 250px;
  	 background-color: #66BD15;
+ }
+
+ .wider {
+ 	width: 200px;
  }

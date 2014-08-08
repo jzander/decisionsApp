@@ -25,3 +25,23 @@
 .dTxt {
 	color: black;
 }
+
+.decTxt {
+	padding-top: .2em;
+}
+
+.decTxt a {
+	color: black;
+	font-weight: bold;
+	font-size: 1em;
+	text-decoration: none;
+}
+
+.decTxt a:hover {
+	text-decoration: none;
+	color: black;
+}
+
+.addCrit {
+	margin-top: 5em;
+}

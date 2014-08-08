@@ -6,11 +6,11 @@
 
 	<div class="addCri">
 
-	<%= form_for [@decision, @criterion] do |f| %>
-		<%= f.text_field :text, placeholder: "What's a criterion for this decision?", :class => "criInput" %>
-		<br />
-		<%= f.submit :class => "btn btn-default btn-md btn-bluer" %>
-	<% end %>
+		<%= form_for [@decision, @criterion] do |f| %>
+			<%= f.text_field :text, placeholder: "What's a criterion for this decision?", :class => "criInput" %>
+			<br />
+			<%= f.submit :class => "btn btn-default btn-md btn-bluer" %>
+		<% end %>
 
 	</div>
 

@@ -49,8 +49,7 @@ class UsersController < ApplicationController
     @user.save
     # Exactly the same idea as this little number:
 #    User.find_by(id: params[:id])
-    redirect_to users_path
-
+      redirect_to users_path
   end
 
   def reactivate
