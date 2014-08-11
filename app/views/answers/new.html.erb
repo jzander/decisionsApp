@@ -18,11 +18,11 @@
 							<b><%= c.text %></b> <br /><span class="decision"> for the decision <b><%= c.decision.text %></b></span>
 						</div>
 
-						<div class="col-sm-3 rating">
+						<div class="col-sm-2 rating">
 							<b> <%= c.importance %></b> <br />
 						</div>
-
-						<div class="col-sm-3">
+						<div class="col-sm-2"></div>
+						<div class="col-sm-2">
 							<%= button_to "delete this factor", decision_criterion_path(@decision.id, c.id), method: :delete, :class => "btn btn-default btn-md btn-redr deleteCri" %>
 						</div>
 				
