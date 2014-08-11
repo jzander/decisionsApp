@@ -66,7 +66,7 @@ body {
  	border: none;
  	color: white;
  	width: 250px;
- 	margin-top: 1em;
+ 	margin-top: 0em;
  }
 
    .btn-red {
@@ -74,6 +74,14 @@ body {
  	border: none;
  	color: white;
  	width: 160px;
+ 	margin-top: 1em;
+ }
+
+    .btn-reder {
+ 	background-color: #FF3333;
+ 	border: none;
+ 	color: white;
+ 	width: 40px;
  	margin-top: 1em;
  }
 
@@ -100,9 +108,9 @@ body {
 
  .topBar {
  	position: fixed;
- 	top: -.5em;
+ 	top: -.3em;
  	float: right;
- 	right: .5em;
+ 	right: 10em;
  }
 
  .prev {
@@ -111,5 +119,45 @@ body {
  }
 
  .wider {
- 	width: 200px;
+ 	width: 160px;
  }
+
+ .myNavBar {
+ 	background-color: rgba(73, 131, 230, 1);
+	-webkit-transition: background-color ease-out .4s;
+	-moz-transition: background-color ease-out .4s;
+	-o-transition: background-color ease-out .4s;
+	transition: background-color ease-out .4s;
+ 	color: white;
+ 	border-radius: none !important;
+ 	border: none !important;	
+ }
+
+ .myNavBar:hover {
+ 	 background-color: rgba(73, 131, 230, .7);
+	-webkit-transition: background-color ease-out .4s;
+	-moz-transition: background-color ease-out .4s;
+	-o-transition: background-color ease-out .4s;
+	transition: background-color ease-out .4s;
+
+ }
+
+ .myTitle {
+ 	color: white !important;
+ }
+
+.navLinks a {
+ 	color: white !important;
+ }
+
+.navbar {
+  border-radius: (0) !important;
+}
+
+.signBtn {
+	margin-bottom: 1.2em;
+}
+
+#mySpace {
+	margin-top: 4em !important;
+}

@@ -2,14 +2,28 @@
 
 <h2>Add some important factors for your decision:</h2>
 
-<h2><%= @decision.text %></h2>
+<h2><strong><%= @decision.text %></strong></h2>
 
 	<div class="addCri">
 
-		<%= form_for [@decision, @criterion] do |f| %>
-			<%= f.text_field :text, placeholder: "What's a criterion for this decision?", :class => "criInput" %>
+		<%= form_for [@decision, @criterion] do |twoCriterion| %>
+			<%= twoCriterion.text_field :text, placeholder: "What's a criterion for this decision?", :class => "criInput" %>
+			<br /><br />
+			Give this factor a value: <%= twoCriterion.select :importance,  
+								'<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>'.html_safe
+
+							  %>
 			<br />
-			<%= f.submit :class => "btn btn-default btn-md btn-bluer" %>
+			<%= twoCriterion.submit :class => "btn btn-default btn-md btn-bluer" %>
 		<% end %>
 
 	</div>

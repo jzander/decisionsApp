@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
   resources :decisions, only: [:index, :new, :create, :destroy, :edit] do
     resources :criteria, only: [:index, :new, :create, :destroy]
+      resources :answers, only: [:index, :new, :create, :destroy]
   end
 
   get 'decisions/home' => 'decisions#home', as: :home
 
-  root to: 'decisions#home'
+
+  root to: 'decisions#new'
 
   resource :session, only: [:new, :create, :destroy]
 
@@ -17,9 +19,6 @@ Rails.application.routes.draw do
   put 'users/:id' => 'users#update'
   patch 'users/:id' => 'users#update'
   delete 'users/:id' => 'users#destroy'
-
-
- 
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
