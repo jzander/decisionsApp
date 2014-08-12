@@ -10,9 +10,9 @@
       </button>  
       <a class="navbar-brand myTitle" href="/"><strong>Answer<span class="guru">Guru</span></strong></a>
       <ul class="nav navbar-nav navbar-left navLinks">
-        <%= form_for @user, {url: new_user_path} do |f| %>
-          <li><%= link_to "Sign up", new_user_path, :class => "btn btn-default btn-md btn-log" %></li>
-        <% end %>
+        <%#= form_for @user, {url: new_user_path} do |f| %>
+          <li><%= button_to "Sign up", new_user_path, :class => "btn btn-default btn-md btn-log" %></li>
+        <%# end %>
       </ul>
     </div>
 

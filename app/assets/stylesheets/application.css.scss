@@ -85,7 +85,7 @@ body {
  	color: white;
  	border: none;
  	margin-top: .8em;
- 	padding-bottom: 1.8em;
+ 	padding-bottom: -1.8em;
 	-webkit-transition: background-color ease-out .3s;
 	-moz-transition: background-color ease-out .3s;
 	-o-transition: background-color ease-out .3s;
@@ -171,6 +171,7 @@ ul .btn-log {
  	height: 30px;
  	margin-bottom: .8em;
  	width: 220px;
+ 	color: black !important;
  }
 
    .inputEmaile {
@@ -178,6 +179,7 @@ ul .btn-log {
  	height: 30px;
  	margin-bottom: .8em;
  	width: 170px;
+ 	color: black !important;
  }
 
  .topBar {
