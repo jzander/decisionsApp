@@ -37,6 +37,29 @@ body {
  	margin-top: 1em;
  }
 
+   .btn-grey {
+ 	background-color: white;
+ 	border: none;
+ 	color: #777;
+ 	width: 100px;
+ 	margin-top: -.1em;
+ 	margin-right: .5em;
+ 	margin-left: .5em;
+ 	padding-bottom: 1.8em;
+ 	height: 26px;
+ }
+
+   .navLinks .btn-greye {
+ 	background-color: white;
+ 	border: none;
+ 	color: #777 !important;
+ 	width: 100px;
+ 	margin-top: -.1em;
+ 	margin-right: .5em;
+ 	padding-bottom: 1.8em;
+ 	height: 26px;
+ }
+
    .btn-bluey {
  	background-color: #4983E6;
  	border: none;
@@ -51,6 +74,32 @@ body {
  	color: white;
  	width: 250px;
  	margin-top: 1em;
+ }
+
+ .btn-log {
+ 	height: 30px;
+ 	background-color: rgba(87, 211, 25, .6);
+ 	color: white;
+ 	border: none;
+ 	margin-top: .8em;
+ 	padding-bottom: 1.8em;
+	-webkit-transition: background-color ease-out .3s;
+	-moz-transition: background-color ease-out .3s;
+	-o-transition: background-color ease-out .3s;
+	transition: background-color ease-out .3s;
+ }
+
+  .btn-log:hover {
+  	background-color: rgba(87, 211, 25, 1);
+ 	color: white;
+	-webkit-transition: background-color ease-out .3s;
+	-moz-transition: background-color ease-out .3s;
+	-o-transition: background-color ease-out .3s;
+	transition: background-color ease-out .3s;
+ }
+
+ul .btn-log {
+ 	 padding-top: -30px !important;
  }
 
    .btn-green {
@@ -114,6 +163,20 @@ body {
  	margin-bottom: .2em;
  }
 
+  .inputEmailer {
+ 	margin-top: 1em;
+ 	height: 30px;
+ 	margin-bottom: .8em;
+ 	width: 220px;
+ }
+
+   .inputEmaile {
+ 	margin-top: 1em;
+ 	height: 30px;
+ 	margin-bottom: .8em;
+ 	width: 170px;
+ }
+
  .topBar {
  	position: fixed;
  	top: -.3em;
@@ -131,7 +194,7 @@ body {
  }
 
  .myNavBar {
- 	background-color: rgba(73, 131, 230, 1);
+ 	background-color: rgba(73, 131, 230, .7);
 	-webkit-transition: background-color ease-out .4s;
 	-moz-transition: background-color ease-out .4s;
 	-o-transition: background-color ease-out .4s;
@@ -142,7 +205,7 @@ body {
  }
 
  .myNavBar:hover {
- 	 background-color: rgba(73, 131, 230, .7);
+ 	 background-color: rgba(73, 131, 230, 1);
 	-webkit-transition: background-color ease-out .4s;
 	-moz-transition: background-color ease-out .4s;
 	-o-transition: background-color ease-out .4s;

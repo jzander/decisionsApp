@@ -6,7 +6,6 @@ Rails.application.routes.draw do
 
   get 'decisions/home' => 'decisions#home', as: :home
 
-
   root to: 'decisions#new'
 
   resource :session, only: [:new, :create, :destroy]

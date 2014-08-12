@@ -14,6 +14,8 @@ class DecisionsController < ApplicationController
 
   def new
   	@decision = Decision.new
+    @user = User.new
+    @is_login = true
   end
 
   def create
