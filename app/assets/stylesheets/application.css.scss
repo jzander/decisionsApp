@@ -14,6 +14,9 @@
  *= require_self
  */
 
+@import url(http://fonts.googleapis.com/css?family=Dancing+Script:400,700);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu+Condensed);
+
  @import 'bootstrap';
 
 body {
@@ -215,7 +218,16 @@ ul .btn-log {
 
  .myTitle {
  	color: white !important;
+ 	margin-top: .05em;
+ 	font-family: 'helvetica', sans-serif;
+ 	font-weight: 700;
+ 	font-size: 2em;
  }
+
+ .guru {
+ 	font-family: 'Dancing Script', cursive;
+ 	font-weight: 700;
+}
 
 .navLinks a {
  	color: white !important;
