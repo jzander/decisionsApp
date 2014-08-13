@@ -4,4 +4,8 @@ class Criterion
   field :importance, type: Integer
   
   belongs_to :decision
+  has_many :answers
+
+
+
 end

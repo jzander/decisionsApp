@@ -39,13 +39,14 @@
 
 			<div class="addCri text-center">
 
-				<%= form_for [@decision, @criterion] do |oneCriterion| %>
+				<%= form_for @decision do |f| %>
 					<div class="col-md-4 pull-left">
-					<%= oneCriterion.text_field :text, placeholder: "What's a factor for this decision?", :class => "criInputer text-center" %>
+					<%= f.fields_for :criteria do |builder| %>
+					<%= builder.text_field :text, placeholder: "What's a factor for this decision?", :class => "criInputer text-center" %>
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
 						</div>
 					<div class="col-md-4 text-center">
-						Give this factor a value: <%= oneCriterion.select :importance,  
+						Give this factor a value: <%= builder.select :importance,  
 							'<option value="1">1</option>
 							<option value="2">2</option>
 							<option value="3">3</option>
@@ -60,8 +61,10 @@
 						  %>
 					</div>
 
+					<% end %>
+
 					<div class="col-md-4 pull-right">
-						  <%= oneCriterion.submit :class => "btn btn-default btn-md btn-greeny" %>
+						  <%= f.submit :class => "btn btn-default btn-md btn-greeny" %>
 					</div>
 
 					<br /><br />

@@ -29,6 +29,7 @@ class DecisionsController < ApplicationController
   	@decision = Decision.new
     @user = User.new
     @is_login = true
+    @decision.criteria.build
   end
 
   def create
@@ -37,13 +38,18 @@ class DecisionsController < ApplicationController
       return
     end
     decision = current_user.decisions.new(
-  		params.require(:decision).permit(:text)
+  		decision_params
   		)
     # with this decision object, attach it to the user.
     decision.user = current_user
   	if decision.save
 	  	redirect_to decisions_path
   	end
+  end
+
+  def update
+    Decision.find(params[:id]).update
+      (decision_params)
   end
 
   def destroy
@@ -54,4 +60,12 @@ class DecisionsController < ApplicationController
       redirect_to decisions_path
     end
   end
+
+  private
+    def decision_params
+      params.require(:decision).permit(:text, :criteria_attributes => [:text, :importance])
+
+
+    end
+
 end

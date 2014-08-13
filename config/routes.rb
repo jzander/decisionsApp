@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   root to: 'decisions#new'
 
-  resources :decisions, only: [:index, :new, :create, :destroy, :edit] do
+  resources :decisions, only: [:index, :new, :create, :update, :destroy, :edit] do
     resources :criteria, only: [:index, :new, :create, :destroy]
       resources :answers, only: [:index, :new, :create, :destroy]
   end

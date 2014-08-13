@@ -2,8 +2,8 @@ class CriteriaController < ApplicationController
   before_action :get_decision, :check_security
 
     def index
-    	@criteria = @decision.criteria
-      @criterion = Criterion.new
+    	@decision.criteria.build
+      @criteria = Criterion.all
     end
 
     def new
@@ -40,6 +40,11 @@ class CriteriaController < ApplicationController
     end
 
   private
+    def criteria_params
+      params.require(:criterion).permit(
+        :text, :importance, answer_ids: [])
+    end
+
     def get_decision
        #find our parent decision that we should attach to
        @decision = Decision.find(params[:decision_id])
