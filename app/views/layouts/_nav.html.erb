@@ -10,36 +10,48 @@
       </button>  
       <a class="navbar-brand myTitle" href="/"><strong>Answer<span class="guru">Guru</span></strong></a>
       <ul class="nav navbar-nav navbar-left navLinks">
-        <%= form_for @user, {url: new_user_path} do |f| %>
-          <li><%= link_to "Sign up", new_user_path, :class => "btn btn-default btn-md btn-log" %></li>
-        <% end %>
+        <%#= form_for @user, {url: new_user_path} do |f| %>
+          <li><%#= button_to "Sign up", new_user_path, :class => "btn btn-default btn-md btn-log", :method :get %></li>
+        <%# end %>
       </ul>
     </div>
 
      <ul class="nav navbar-nav navbar-right navLinks">
         <% if current_user %>  
-          <li class="navLinks"><a href='/decisions'>Prev</a></li>
+          <li class="navLinks"><%= button_to "Log out", session_path, method: :delete, :class => "btn btn-default btn-md btn-greene" %></li>
         <% else %>
-          <li></li>
+          <li>
+            <%= button_to "Sign up!", new_user_path, method: :get, :class => "btn btn-default btn-md btn-greene" %>
+          </li>
+          <li>
+            <%= button_to "Log in", new_session_path, method: :get, :class => "btn btn-default btn-md btn-greene" %>
+          </li>
         <% end %>
 
-        <% if current_user %>
-          <li class="navLinks"><%= link_to "Log out", session_path, method: :delete %></li>
-        <% else %>
-          <%= form_for @user, {url: session_path} do |f| %>
-            <li class="navLinks"><%= f.text_field :email, placeholder: "Email", :class => "inputEmailer" %> <%= f.password_field :password, placeholder: "password", :class => "inputEmaile" %> <%= f.submit "Log in", :class => "btn btn-default btn-md btn-grey" %></li>
-          <% end %>
-        <% end %>
+        <%# if current_user %>
+          <li class="navLinks">
+              <%#= button_to "Log out", session_path, method: :delete %>
+          </li>
+        <%# else %>
+          
+        <%#= form_for @user, {url: session_path} do |f| %>
+            <li class="navLinks">
+              <%#= f.text_field :email, placeholder: "Email", :class => "inputEmailer" %> 
+              <%#= f.password_field :password, placeholder: "password", :class => "inputEmaile" %> 
+              <%#= f.submit "Log in", :class => "btn btn-default btn-md btn-grey" %>
+            </li>
+          <%# end %>
+        <%# end %>
       </ul>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <% if current_user %>  
+        <%# if current_user %>  
           <li class="navLinks"><a href="/decisions/new">New Decision</a></li>
-        <% else %>
+        <%# else %>
           <li></li>
-        <% end %>
+        <%# end %>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

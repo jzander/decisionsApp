@@ -5,6 +5,14 @@ class SessionsController < ApplicationController
 		@is_login = true
 	end
 
+	def current_user
+      if User && :user_id && session[:user_id]
+        @current_user ||= User.find(session[:user_id]) if session[:user_id]
+      else
+        return false
+      end
+  	end
+
 	def create
 		# brings us into our session/stores the thought of loggin in/places cookies/only local machine knows its logged in.
 		 

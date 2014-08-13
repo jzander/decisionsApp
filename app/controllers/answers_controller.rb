@@ -1,4 +1,4 @@
-class CriteriaController < ApplicationController
+class AnswersController < ApplicationController
   before_action :get_decision, :check_security
 
     def index

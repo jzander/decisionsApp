@@ -105,6 +105,15 @@ ul .btn-log {
  	 padding-top: -30px !important;
  }
 
+.btn-greene {
+ 	background-color: #66BD15;
+ 	border: none;
+ 	color: white;
+ 	width: 80px;
+ 	margin-top: .7em;
+ 	margin-right: .4em !important;
+ }
+
    .btn-green {
  	background-color: #66BD15;
  	border: none;
@@ -171,6 +180,7 @@ ul .btn-log {
  	height: 30px;
  	margin-bottom: .8em;
  	width: 220px;
+ 	color: black !important;
  }
 
    .inputEmaile {
@@ -178,6 +188,7 @@ ul .btn-log {
  	height: 30px;
  	margin-bottom: .8em;
  	width: 170px;
+ 	color: black !important;
  }
 
  .topBar {
@@ -197,7 +208,7 @@ ul .btn-log {
  }
 
  .myNavBar {
- 	background-color: rgba(73, 131, 230, .7);
+ 	background-color: rgba(73, 131, 230, .9);
 	-webkit-transition: background-color ease-out .4s;
 	-moz-transition: background-color ease-out .4s;
 	-o-transition: background-color ease-out .4s;

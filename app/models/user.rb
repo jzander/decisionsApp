@@ -10,6 +10,7 @@ class User
   has_secure_password
 
   has_many :decisions
+  has_many :answers
 
   #has_many :answers
   

@@ -8,6 +8,16 @@ class CriteriaController < ApplicationController
 
     def new
     	@criterion = Criterion.new
+      @user = User.new
+      @is_login = true
+    end
+
+    def current_user
+      if User && :user_id && session[:user_id]
+        @current_user ||= User.find(session[:user_id]) if session[:user_id]
+      else
+        return false
+      end
     end
 
     def create

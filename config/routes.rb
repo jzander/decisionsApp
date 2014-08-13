@@ -1,12 +1,15 @@
 Rails.application.routes.draw do
+
+  root to: 'decisions#new'
+
   resources :decisions, only: [:index, :new, :create, :destroy, :edit] do
     resources :criteria, only: [:index, :new, :create, :destroy]
       resources :answers, only: [:index, :new, :create, :destroy]
   end
 
-  get 'decisions/home' => 'decisions#home', as: :home
 
-  root to: 'decisions#new'
+
+  get 'decisions/home' => 'decisions#home', as: :home
 
   resource :session, only: [:new, :create, :destroy]
 

@@ -8,6 +8,15 @@ class UsersController < ApplicationController
   def new
     @user = User.new
   end
+
+  def current_user
+    if User && :user_id && session[:user_id]
+      @current_user ||= User.find(session[:user_id]) if session[:user_id]
+    else
+      return false
+    end
+  end
+  
   # Spike
   def create
     user = User.new(params.require(:user).permit(:name, :email, :password, :password_confirmation))
